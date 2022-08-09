@@ -15,7 +15,7 @@ Key questions this model is designed to answer include:
 - Analyzing the impact of other economic sectors and natural systems on the plastics sector and vice versa. 
 - Analyzing trade-offs between sustainability targets, e.g., between climate and circular economy targets, or climate and land use.
 
-## Folder structure and scripts
+## Folder Structure and Scripts
 This repository has the following folders and scripts
 #### [Code](code)
 The source-code of PLAIA is located here. It is made of the following scripts:
