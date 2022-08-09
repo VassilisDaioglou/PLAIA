@@ -871,7 +871,6 @@ PlaWaOpenBurnCumuRes[R,j] 	= SWITCH(t = 1971 ? 			! Cumulative plastic waste ope
 							ELSE PlaWaOpenBurnRes[R,j] + LAST(PlaWaOpenBurnCumuRes[R,j],0.0)), R = 1 TO NRC, j = 1 to PR;
 PlaWaOpenBurnCumuRes[NRC,j] 	= LSUM(R= 1 TO 26, PlaWaOpenBurnCumuRes[R,j]),j = 1 TO PR; 
 
-
 !****************** 8. OVERVIEW ENERGY USE FOR PLASTICS PRODUCTION AND WASTE MANAGEMENT ******************
 ! Energy use in plastics production and end of life in GJ (by production step and waste treatment)
 PlasticEnUse[R,EC,i]	= SWITCH(i = 1 ?
@@ -893,5 +892,8 @@ PlasticEnUse[R,EC,i]	= SWITCH(i = 1 ?
 						), R = 1 TO 26, EC = 1 TO ECP, i= 1 TO 8;
 
 PlasticEnUse[NRC,EC,i]	= LSUM(R= 1 TO 26,PlasticEnUse[R,EC,i]), EC = 1 TO ECP, i = 1 TO 8;							
+
+!****************** CALCULATION OF OUTPUT VARIABLES ******************
+#INCLUDE outputs.m
 
 END;

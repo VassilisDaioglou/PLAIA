@@ -36,12 +36,11 @@ REAL
 REAL 	
     AromaticsPropC4[NRC,FOSSIL+1](t)            = FILE("../data/exogenous/scenario/AromaticsPropC4.scn"),    	! GJsec demand for feedstock energy for aromatics & refinery sourced propylene and C4
     CarbonTax[NRC](t)                           = FILE("../data/exogenous/scenario/CarbonTax.scn"),		        ! $2005 /t carbon
-    CCpPlaWa[NRC](t)                             = FILE("../data/exogenous/scenario/CCpPlaWa.scn"),		        ! ! kg/GJ	Carbon content in kg per GJ plastic waste
+    CCpPlaWa[NRC](t)                            = FILE("../data/exogenous/scenario/CCpPlaWa.scn"),		        ! ! kg/GJ	Carbon content in kg per GJ plastic waste
     EffFEEDNE[NRC,PLASTICFEED](t)	            = FILE("../data/exogenous/scenario/EffFEEDNE.scn"),             ! GJ-HVC/GJ-FEED 	Efficiency of conversion of FEEDNE to HVC (GJ-HVC/GJ-FEED)
 	EffPRIMNE[NRC,NEC](t)				        = FILE("../data/exogenous/scenario/EffPRIMNE.scn"),				! GJ-FEED/GJ-PRIM 	Efficiency of conversion of PRIMNE to FEEDNE (GJ-FEED/GJ-PRIM)
     EnergyRequirement_En[NRC,PLASTICFEED,3](t)	= FILE("../data/exogenous/scenario/EnergyRequirement_En.scn"),  ! GJ/GJ-HVC 		Total, 1. Heat, 2. Electricity, 3. Biomass (according to Ren)
     GDPpc[NRCT](t)				                = FILE("../data/exogenous/scenario/GDPpc.scn"),                          ! $/cap, GDP in ppp values 
-    LandPrice[NRC](t)                       	= FILE("../data/exogenous/scenario/LandPrice.scn"),             ! $/Ha        	Price of land, using GDP per capita as an indicator for income
     MethGross[NRC,7](t)         		        = FILE("../data/exogenous/scenario/MethGross.scn"),             ! GJ fuels for methanol demand, reorganised
     MethNet[NRC,5](t)		                    = FILE("../data/exogenous/scenario/MethNet.scn"),               ! GJ Enery carriers bound in methanol products
 	NonEnFuncTot_Base[NRC,NEUF](t)              = FILE("../data/exogenous/scenario/NonEnFuncTot_Base.scn"),		! GJ		Total demand of non energy per function for baseline scenario: Following historic production capacities and their relation to GDP/cap
@@ -56,6 +55,10 @@ REAL
     SecBioEff_Agr[NRC,2](t) 		            = FILE("../data/exogenous/scenario/SecBioEff_Agr.scn"),         ! -		 Aggregate efficiency of conversion from biomass to biofuel, 1. BLF, 2. BSF
     StmCrGross_BioSE[NRC,7](t)		            = FILE("../data/exogenous/scenario/StmCrGross_BioSE.scn"),      ! GJ-Prim, except for BLF;
     StmCrProd[NRC,5](t) 			            = FILE("../data/exogenous/scenario/StmCrProd.scn");             ! Energy carriers bound in HVC products
+
+DOUBLE
+    LandPrice[NRC](t)                       	= FILE("../data/exogenous/scenario/LandPrice.scn");             ! $/Ha        	Price of land, using GDP per capita as an indicator for income
+    
 
 ! ************* DEFINITION OF VARIABLES *************
 REAL 	
@@ -220,7 +223,14 @@ REAL
 	NEUFtoPla[NEUF](t),							! Shares of NEUF going to plastics; based on Levi & Cullen (2018); For refinery it includes the amount of refinery aromatics, propylene and C4 to plastic (=REFIShares[3] * Prop_C4 * share of them going to plastics (0,59, see plastic shares excel))
 	PlaWaResShare[NRC,2](t),					! GJ		Resource Shares in plastic waste; 1= fossil, 2= bio
 	NEUFinPLA_Base[NRC,NEUF](t),				! Shares of NEUF in plastics
-	NEUFinPLA[NRC,NEUF](t);						! Shares of NEUF in plastics
+	NEUFinPLA[NRC,NEUF](t),						! Shares of NEUF in plastics
+
+! Post processing outputs
+	Plastics_IN[NRC,12](t),		! Plastics produced in GJ by resource (fossil, bio) and by production pathway (primary, MR, PYR)
+    PlasticEnUse_EC[NRC,ECP](t),	! Global Energy carrier use for plastics in GJ
+	FlowsToEOL_Sankey[NRC,7](t),	! total waste flows to EoL, used for sankey diagram (1 = MR, 2= WtE, 3= PYR, 4= LF, 5= collected plastic waste (sum of 1:4), 6= opendump, 7= openburn)
+	MRrejflows[NRC,EOL](t),
+	    Plastics_Sankey[NRC,26](t);
 
 ! ************* DEFINITION OF PARAMETRIC CONSTANTS *************
 REAL
