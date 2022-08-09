@@ -27,7 +27,7 @@ The source-code of PLAIA is located here. It is made of the following scripts:
 #### [Data](data)
 The main data files needed to run PLAIA are located here. There are two main forms of data:
 - **Exogenous**: Contains the main [exogenous data](data/exogenous/data) needed to run PLAIA, as well as default (SSP2) [scenario](data/exogenous/scenario) files 
-- **[Scenario]**(data/scenario): Contains scenario files to allow the running of specific scenarios. These files are produced from scenario runs of the coupled IMAGE-TIMER-PLAIA model
+- **[Scenario](data/scenario)**: Contains scenario files to allow the running of specific scenarios. These files are produced from scenario runs of the coupled IMAGE-TIMER-PLAIA model
 
 #### [Batches](batches)
 Contains batch (```.bat```) files which allow for proper running of the model.
