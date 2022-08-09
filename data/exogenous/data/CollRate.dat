@@ -1,0 +1,8 @@
+! Lookup table for collection rate as a function of GDP per capita
+real main.CollRate(main.em.cl.frcr) = [
+0,            0,            
+435,          0.39,            
+2146,         0.51,            
+7002,         0.82,          
+10582,        0.96          
+];
