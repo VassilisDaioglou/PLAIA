@@ -1,5 +1,6 @@
 # The Plastics Integrated Assessment Model (PLAIA)
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) \
 [![DOI](https://zenodo.org/badge/522538330.svg)](https://zenodo.org/badge/latestdoi/522538330)
 
 *Author: Paul Stegmann*\
