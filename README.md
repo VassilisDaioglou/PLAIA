@@ -1,5 +1,7 @@
 # The Plastics Integrated Assessment Model (PLAIA)
 
+[![DOI](https://zenodo.org/badge/522538330.svg)](https://zenodo.org/badge/latestdoi/522538330)
+
 *Author: Paul Stegmann*\
 *Contact: 
     Paul Stegmann - p.h.stegmann@uu.nl* **or** 
