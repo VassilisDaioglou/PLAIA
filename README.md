@@ -48,8 +48,8 @@ NOTE: To compile and run the PLAIA model, a My-m license is needed. Please visit
 
 #### Method
 In order to run scenarios with the model, the following steps must be taken:
-1. Compile the model by running the ```compile.bat```. This will produce ```plaia.mdl``` in the *source* folder. 
-2. Run the ```call_scenarios.bat``` file. This will sequentially run all of the scenarios and produce outputs in an *output* folder
+1. Compile the model by running the ```compile.bat```. This will produce ```plaia.mdl``` in the [*code*](code) folder. 
+2. Run the ```call_scenarios.bat``` file. This will sequentially run all of the scenarios and produce outputs in a generated *output* folder
 
 #### Scenarios
 Data is provided for the following scenarios:
