@@ -64,7 +64,7 @@ Data is provided for the following scenarios:
 Stegmann, P., Daioglou, V., Londo, M. and Junginger, M., 2022. [The plastics integrated assessment model (PLAIA): Assessing emission mitigation pathways and circular economy strategies for the plastics sector](https://www.sciencedirect.com/science/article/pii/S2215016122000504). *MethodsX*, 9, p.101666.
 
 ***PLAIA Scenario Analysis***\
-Stegmann, P., Daioglou, V., Londo, M., van Vuuren, D. P., and Junginger, M., (accepted). Plastic futures and thier CO<sub>2</sub> emissions. *Nature*
+Stegmann, P., Daioglou, V., Londo, M., van Vuuren, D. P., and Junginger, M., 2022. [Plastic futures and thier CO<sub>2</sub> emissions](https://www.nature.com/articles/s41586-022-05422-5). *Nature*, 612, pp.272–276
 
 ***Feedstocks modelling in IMAGE***\
 Daioglou, V., Faaij, A.P., Saygin, D., Patel, M.K., Wicke, B. and van Vuuren, D.P., 2014. [Energy demand and emissions of the non-energy sector](https://pubs.rsc.org/en/content/articlehtml/2014/ee/c3ee42667j?casa_token=zeyvsPU2B4cAAAAA:8nxyWNmXewAbnL2YJpMYZZGFqerlcr6pyf-Q1xW0i75UriIJJEc0rl5HukPoo_fTjuZ2gwTwtivceQ). *Energy & Environmental Science*, 7(2), pp.482-498.
